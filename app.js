@@ -3,6 +3,24 @@
 //Hours of Operation
 let hrs = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 
+let stores = [];
+
+function Stores(name, min, max, avg) {
+    this.name = name;
+    this.min = min;
+    this.max = max;
+    this.avg = avg; 
+    
+    stores.push(this);
+  }
+
+let store1 = new Stores('Seattle', 23, 65, 6.3);
+let store2 = new Stores('Tokyo', 3, 24, 1.2);
+let store3 = new Stores('Dubai', 11, 38, 3.7);
+let store4 = new Stores('Paris', 20, 38, 2.3);
+let store5 = new Stores('Lima', 2, 16, 4.6);
+
+
 // <----Seattle---->
 
 let seattle = {
@@ -236,3 +254,17 @@ this.customer.push(Math.floor(Math.random() * (this.max - this.min + 1) + this.m
 }; 
 
 lima.render();
+
+
+// ---------------------------------
+
+let salmonCookies = [];
+
+function salmonCookies( avgCook, avgCust, total){
+  this.storeName = storeName;
+  this.avgCook = avgCook;
+  this.avgCust = avgCust;
+  this.total = total;
+  
+
+  salmonCookies.push(this);
