@@ -31,6 +31,7 @@ function Stores(name, min, max, avg) {
     {
       this.customers[i]=random(this.min, this.max);
     }
+  
   }
 
   Stores.prototype.setCookies = function(){
@@ -38,20 +39,20 @@ function Stores(name, min, max, avg) {
     this.setCustomers();
     let len = this.customers.length;
     for(let i = 0; i < len; i++){
-      let cookiesSold = Math.ceil(this.customers[i] * this.avg);
-      this.cookies.push(cookiesSold);
-      this.total += cookiesSold;
+      let setCustomers = Math.ceil(this.customers[i] * this.avg);
+      this.cookies.push(setCustomers);
+      this.total = this.total + setCustomers;
     }
+
   }
 
-  Stores.prototype.render = function()
-  {
+  Stores.prototype.render = function(){
 
     this.setCookies();
     let body = document.getElementById('shops');
     let trElem = document.createElement('tr');
     body.appendChild(trElem);
-    
+
     let tdElem = document.createElement('td');
     tdElem.textContent = this.name;
     trElem.appendChild(tdElem);
@@ -62,16 +63,13 @@ function Stores(name, min, max, avg) {
       tdElem2.textContent = this.cookies[i];
       trElem.appendChild(tdElem2);
 
-      // if(i === hrs.length -2){
-
-      //   let finalListItem = document.createElement('td');
-      //   finalListItem.textContent = stores.tracker.TotalCookies;
-      //   trElem.appendChild(finalListItem);
-
-      //   break;
-      // }
     }
-  }
+    
+    let totals = document.createElement('td');
+    totals.textContent = this.total;
+    trElem.appendChild(totals);
+    }
+  
 
   function createTheader(){
     
@@ -88,7 +86,11 @@ function Stores(name, min, max, avg) {
       let thElem = document.createElement('th');
       thElem.textContent = hrs[j];
       trElement.appendChild(thElem); 
+
     }
+    let totals = document.createElement('td');
+    totals.textContent = ('Totals');
+    trElement.appendChild(totals);
   }
 
 
