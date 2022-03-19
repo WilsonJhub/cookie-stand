@@ -111,12 +111,46 @@ function main(){
   }
 return;
 }
+
+// Array that has sum total of all sales throughout the hours of operation listed at the bottom of your sales table. 
+// 7am totals are going to equal the total for each individual store.
+// function totalhrs(){
+//   createtFoot();
+//   for(let )
+// }
+
+  
+
 main();
 
 
 
+//--------FORM REFERENCE------------------------
 
 
+
+let cookieForm = document.getElementById('myForm');
+cookieForm.addEventListener('submit, handleSubmit');
+
+function handleSubmit(event){
+  event.preventDefault();
+  
+  let name = event.target.name.value;
+  let min = +event.target.min.value
+  let max = +event.target.max.value;
+  let avg = +event.target.avg.value;
+
+  let cookieStore = new StoreStats(name, min, max, avg);
+  cookieStore.avgCust();
+  userStore.render();
+
+  tfootElem.innerHTML = '';
+  for(let i = 0; i < storeList.length; i++){
+    cookiesPerHour[i] = 0;
+  }
+  // hourlyTotalArr();
+  renderTfoot();
+}
 
 
 
