@@ -2,16 +2,40 @@
  <html lang="en">
  <head>
    <title>Document</title>
- </head>
-    <h2><a href="index.html">Home Page</a></h2>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=0">
-      <link rel="stylesheet" href="">
-      <link href="style.css" rel ="stylesheet">
- <body>
-   <table id="shops">  
-   </table>
-   <script src = "app.js"></script>
- </body>
+  </head>
+  <body>
+    <nav>
+      <header><h2><a href="index.html">Home Page</a></h2>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+        <link rel="stylesheet" href="">
+        <link href="style.css" rel ="stylesheet">
+        <table id="shops"></table>
+        <script src = "app.js"></script>
+      </nav>
+   </header>
+   <main>
+    <div id="flexbox">
+    <form id="getForm">
+      <fieldset>
+        <legend>New Store</legend>
+        <label for="name">Store Location:</label>
+        <input type="text" name="name" id="name">
+        <label for="min">Minimum Customers per Hour:</label>
+        <input type="number" name="min" id="min">
+        <label for="max">Maximim Customers per Hour:</label>
+        <input type="number" name="max" id="max"></label>
+        <label for="avg">Average Cookie perCustomer:</label>
+        <input tupe="text" name="avg" id="avg">
+      </fieldset>
+     </div>
+   </main>
+    
+   
+  
+
+
+
+  </body>
  </html>
