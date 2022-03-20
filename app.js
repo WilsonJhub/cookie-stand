@@ -82,7 +82,7 @@ function Stores(name, min, max, avg) {
     th1.textContent = 'Location';
     trElement.appendChild(th1);
 
-    for(let j = 0; j< hrs.length; j++){
+    for(let j = 0; j < hrs.length; j++){
       let thElem = document.createElement('th');
       thElem.textContent = hrs[j];
       trElement.appendChild(thElem); 
