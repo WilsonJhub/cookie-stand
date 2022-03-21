@@ -1,18 +1,19 @@
 * {
-  background-color: rgb(175, 229, 231);
+  background-color: rgb(60, 69, 70);
 
 }
 
 h1 {
+  display: flex;
   font-size: 3.0em;
   text-align: center;
   text-decoration: underline;
   margin: 50px;
+  color: white;
+
 }
-h2 {
-  font-size: 1.0vw;
-  color: salmon;
-}
+
+
 
 ul {
   list-style-type: square;
@@ -33,6 +34,68 @@ td {
 
 }
 
-#bd{
-  background-color: salmon;
+
+/* <----------------INDEX.HTML--------------> */
+#patsin {
+  display: flex;
+  justify-content: center;
+  font-size: 3.6em;
+  color: white;
+
 }
+
+#salesinfo {
+  display: flex; 
+  justify-content: right;
+  font-size: 2.0em;
+  margin: 0px 50px 0px 0px;
+  color: white;
+}
+
+h3 {
+  display: flex;
+  color: white;
+  
+}
+
+#section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 30px 30px 30px;
+}
+
+
+
+
+
+
+
+
+
+/* <----------------SALES.HTML--------------> */
+
+
+#bd{
+  display: flex;
+  justify-content: center;
+  color:white;
+  
+  
+}
+
+#hp {
+  color: white;
+}
+
+#salesinfo {
+  color: white;
+}
+
+
